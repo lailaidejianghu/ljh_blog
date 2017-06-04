@@ -11,7 +11,14 @@ layout: default
         <a href="http://www.douban.com/people/ljh/" target="_blank"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
         <a href="http://instagram.com/ljh/" target="_blank"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a-->
       </div>
+      <!-- particles.js container -->
       <div id="particles-js"></div>
+      <!-- stats - count particles -->
+      <div class="count-particles">
+        <span class="js-count-particles">--</span> particles
+      </div>
+      
+      <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
     </div>
 
     <div class="index-content">
