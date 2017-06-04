@@ -1,8 +1,8 @@
 ---
-layout: post
-title: python学习笔记
-date: 2017-04-22 11:15:06 
-tag: python
+layout:     post
+title:    python学习笔记 
+category: blog
+description: 
 ---
 
 注：本文档不再更新，比较python官方文档和'廖雪峰'老师的教程，发现有些差别，想脱离廖老师教程，参照官方文档来从新编写。
