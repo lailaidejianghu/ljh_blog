@@ -1,9 +1,10 @@
 ---
-layout: post
-title: vim教程
-date: 2017-04-22 11:15:06 
-tag: vim
+layout:     post
+title:    vim教程
+category: blog
+description: 
 ---
+
 注：本教程来源于[陈皓](http://coolshell.cn/articles/5426.html)，多谢分享。
 ### 基本操作
 ```

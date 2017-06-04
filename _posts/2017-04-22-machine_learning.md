@@ -1,11 +1,10 @@
 ---
-layout: post
-title: 机器学习
-date: 2017-04-22 11:15:06 
-tag: 
--机器学习
--Machine Learning
+layout:     post
+title:     机器学习 
+category: blog
+description: 
 ---
+
 ### 监督学习 Supervised learnin
 #### 先规范符合和含义：   
 * x(i)表示“输入的变量值，叫`输入特征`。
