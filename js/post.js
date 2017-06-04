@@ -28,4 +28,8 @@ $(function() {
     if(/\#comment/.test(location.hash)){
         $('#disqus_container .comment').trigger('click');
     }
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+});
 })
