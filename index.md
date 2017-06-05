@@ -14,12 +14,9 @@ layout: default
      
       
    </div>
-    <script src="particles.js"></script> 
-     <div id="particles-js"></div>
-       <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
-    particlesJS.load('particles-js', 'particles.json', function() {
-     console.log('callback - particles.js config loaded');
-    });
+    <div id="particles-js"></div>
+   <script src="particles.js"></script> 
+    <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js --
     
     <div class="index-content">
       <ul class="artical-list">
