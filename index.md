@@ -16,7 +16,8 @@ layout: default
    </div>
    
    <div id="particles-js"></div>
-   <script src="particles.js" defer="defer"></script> 
+   <scrip src="http://vincentgarreau.com/particles.js/particles.js"></script>
+   <!--script src="particles.js" defer="defer"></script--> 
     <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
     
     <div class="index-content">
