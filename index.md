@@ -11,10 +11,16 @@ layout: default
         <a href="http://www.douban.com/people/ljh/" target="_blank"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
         <a href="http://instagram.com/ljh/" target="_blank"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a-->
       </div>
-      <div id="particles-js"></div>
-      <script src="particles.js"></script> 
-      <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
-    </div>
+     
+      
+   </div>
+    <script src="particles.js"></script> 
+     <div id="particles-js"></div>
+       <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
+    particlesJS.load('particles-js', 'particles.json', function() {
+     console.log('callback - particles.js config loaded');
+    });
+    
     <div class="index-content">
       <ul class="artical-list">
         {% for post in site.categories.blog %}
