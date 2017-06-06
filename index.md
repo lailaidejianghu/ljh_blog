@@ -2,8 +2,7 @@
 layout: default
 ---
 
-<body onload="run();">
-  <img id="background" alt="background" src="" />
+<body>
   <div class="index-wrapper">
     <div class="aside">
       <div class="info-card">
@@ -11,15 +10,10 @@ layout: default
         <!--a href="http://weibo.com/ljh/" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
         <a href="http://www.douban.com/people/ljh/" target="_blank"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
         <a href="http://instagram.com/ljh/" target="_blank"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a-->
+        <div id="particles-js"></div>
+        <script src="js/particles.js"></script> 
       </div>
-     
-      
-   </div>
-   
-   <div id="particles-js"></div>
-   <script src="js/particles.js"></script> 
-    <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
-    
+     </div> 
     <div class="index-content">
       <ul class="artical-list">
         {% for post in site.categories.blog %}
