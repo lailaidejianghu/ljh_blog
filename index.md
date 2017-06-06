@@ -2,7 +2,8 @@
 layout: default
 ---
 
-<body>
+<body onload="run();">
+  <img id="background" alt="background" src="" />
   <div class="index-wrapper">
     <div class="aside">
       <div class="info-card">
