@@ -304,7 +304,7 @@ a.external:hover {
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
 }
-@media mobiel {
+@media $mobiel {
   .post-wrapper h2 {
     font-size: 20px;
   }
