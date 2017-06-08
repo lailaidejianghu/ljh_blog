@@ -6,6 +6,7 @@ description: Echarts在markdown中示例
 ---
 
 <body>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="width: 600px;height:400px;"></div>
     <script type="text/javascript">
