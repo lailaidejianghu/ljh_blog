@@ -1,6 +1,6 @@
 ---
-layout:     post
-title:      Echarts用法
+layout: post
+title: Echarts用法
 category: blog
 description: Echarts在markdown中示例
 ---
