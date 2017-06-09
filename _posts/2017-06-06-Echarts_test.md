@@ -209,9 +209,6 @@ description: Echarts在markdown中示例
        label: {
            normal: {
                formatter: 'y = 1.0145 * x + 1.0582',
-                          <!-- 'y=-0.1294*x^2 +2.4497*x-1.37',
-                           'y = -0.0169x5 + 0.5377x4 - 6.4436x3 + 35.56x2 - 86.244x + 76.87'
-               ]-->
                textStyle: {
                    align: 'right'
                }
@@ -224,9 +221,6 @@ description: Echarts在markdown中示例
        },
        tooltip: {
            formatter: 'y = 1.0145 * x + 1.0582',
-                      <!-- 'y=-0.1294*x^2 +2.4497*x-1.37',
-                       'y = -0.0169x5 + 0.5377x4 - 6.4436x3 + 35.56x2 - 86.244x + 76.87'
-           ]-->
        },
        data: [[{
            coord: [0, 2],
@@ -292,3 +286,7 @@ description: Echarts在markdown中示例
    </script>
 
 </body>
+
+                          <!-- 'y=-0.1294*x^2 +2.4497*x-1.37',
+                           'y = -0.0169x5 + 0.5377x4 - 6.4436x3 + 35.56x2 - 86.244x + 76.87'
+               ]-->
