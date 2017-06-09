@@ -35,7 +35,7 @@ description: Echarts在markdown中示例
     </script>
     
     
-   <div id="main1" style="width: 600px;height:400px;"></div>
+   <!--div id="main1" style="width: 600px;height:400px;"></div>
     <script type="text/javascript"> 
        var myChart = echarts.init(document.getElementById('main1'));
        var dataAll = [
@@ -158,7 +158,7 @@ description: Echarts在markdown中示例
         ]
     };
      myChart.setOption(option);
-   </script>
+   </script-->
 
    <div id="main1" style="width: 600px;height:400px;"></div>
    <script type="text/javascript"> 
