@@ -11,7 +11,6 @@ description: Echarts在markdown中示例
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
-
         // 指定图表的配置项和数据
         var option = {
             title: {
@@ -31,7 +30,6 @@ description: Echarts在markdown中示例
                 data: [5, 20, 36, 10, 10, 20]
             }]
         };
-
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
     </script>
@@ -81,7 +79,6 @@ description: Echarts在markdown中示例
             [5.0, 5.73]
         ]
     ];
-
     var markLineOpt = {
         animation: false,
         label: {
@@ -108,7 +105,6 @@ description: Echarts在markdown中示例
             symbol: 'none'
         }]]
     };
-
     option = {
         title: {
             text: 'Anscombe\'s quartet',
@@ -162,5 +158,137 @@ description: Echarts在markdown中示例
         ]
     };
      myChart.setOption(option);
-    </script>
+   </script>
+
+   <div id="main1" style="width: 600px;height:400px;"></div>
+   <script type="text/javascript"> 
+      var myChart = echarts.init(document.getElementById('main1'));
+      var dataAll = [
+       [
+          [0,2.6],
+          [1,3.4],
+          [2,4.3],
+          [3,4.7],
+          [4,5],
+          [5,7.2],
+          [6,8.4],
+          [7,8.4],
+          [8,10.7],
+          [9,11.3],
+          [10,12.6]
+       ],
+       [
+           [0,1.2],
+           [1,2.45],
+           [2,5],
+           [3,6.85],
+           [4,7.6],
+           [5,8.25],
+           [6,8.7],
+           [7,10.65],
+           [8,10.9],
+           [9,9.65],
+           [10,9.9]
+       ],
+       [
+           [0,20],
+           [1,4.5],
+           [2,1],
+           [3,11],
+           [4,12.5],
+           [5,12.8],
+           [6,13.2],
+           [7,14],
+           [8,16],
+           [9,18],
+           [10,12]
+       ]
+   ];
+   var markLineOpt = {
+       animation: false,
+       label: {
+           normal: {
+               formatter: ['y = 1.0145 * x + 1.0582',
+                           'y=-0.1294*x^2 +2.4497*x-1.37',
+                           'y = -0.0169x5 + 0.5377x4 - 6.4436x3 + 35.56x2 - 86.244x + 76.87'
+               ]
+               textStyle: {
+                   align: 'right'
+               }
+           }
+       },
+       lineStyle: {
+           normal: {
+               type: 'solid'
+           }
+       },
+       tooltip: {
+           formatter: ['y = 1.0145 * x + 1.0582',
+                       'y=-0.1294*x^2 +2.4497*x-1.37',
+                       'y = -0.0169x5 + 0.5377x4 - 6.4436x3 + 35.56x2 - 86.244x + 76.87'
+           ]
+       },
+       data: [[{
+           coord: [0, 2],
+           symbol: 'none'
+       }, {
+           coord: [20, 13],
+           symbol: 'none'
+       }]]
+   };
+   option = {
+       title: {
+           text: 'Anscombe\'s quartet',
+           x: 'center',
+           y: 0
+       },
+       grid: [
+           {x: '7%', y: '7%', width: '38%', height: '38%'},
+           {x2: '7%', y: '7%', width: '38%', height: '38%'},
+           {x: '7%', y2: '7%', width: '38%', height: '38%'},
+           {x2: '7%', y2: '7%', width: '38%', height: '38%'}
+       ],
+       tooltip: {
+           formatter: 'Group {a}: ({c})'
+       },
+       xAxis: [
+           {gridIndex: 0, min: 0, max: 10},
+           {gridIndex: 1, min: 0, max: 10},
+           {gridIndex: 2, min: 0, max: 10}
+       ],
+       yAxis: [
+           {gridIndex: 0, min: 0, max: 13},
+           {gridIndex: 1, min: 1, max: 11},
+           {gridIndex: 2, min: 1, max: 20}
+       ],
+       series: [
+           {
+               name: 'I',
+               type: 'scatter',
+               xAxisIndex: 0,
+               yAxisIndex: 0,
+               data: dataAll[0],
+               markLine: markLineOpt
+           },
+           {
+               name: 'II',
+               type: 'scatter',
+               xAxisIndex: 1,
+               yAxisIndex: 1,
+               data: dataAll[1],
+               markLine: markLineOpt
+           },
+           {
+               name: 'III',
+               type: 'scatter',
+               xAxisIndex: 2,
+               yAxisIndex: 2,
+               data: dataAll[2],
+               markLine: markLineOpt
+           }
+       ]
+   };
+    myChart.setOption(option);
+   </script>
+
 </body>
