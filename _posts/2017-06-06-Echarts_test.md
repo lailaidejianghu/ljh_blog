@@ -164,7 +164,7 @@ description: Echarts在markdown中示例
    <table>
     <tr>
       <th>
-            <div id="chart1" style="width: 200px;height:200px;"></div>
+            <div id="chart1" style="width: 300px;height:300px;"></div>
              <script type="text/javascript"> 
                var myChart = echarts.init(document.getElementById('chart1'));
                var data =[ [0,2.6],
@@ -266,7 +266,7 @@ description: Echarts在markdown中示例
             </script>
         </th>
         <th>
-            <div id="chart2" style="width: 200px;height:200px;"></div>
+            <div id="chart2" style="width: 300px;height:300px;"></div>
              <script type="text/javascript"> 
                var myChart = echarts.init(document.getElementById('chart2'));
                var data = [
@@ -369,7 +369,7 @@ description: Echarts在markdown中示例
             </script>
         </th>
         <th>
-            <div id="chart3" style="width: 200px;height:200px;"></div>
+            <div id="chart3" style="width: 300px;height:300px;"></div>
             <script type="text/javascript"> 
                var myChart = echarts.init(document.getElementById('chart3'));
                var data = [
