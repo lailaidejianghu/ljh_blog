@@ -469,4 +469,6 @@ description: Echarts在markdown中示例
                myChart.setOption(option);
             </script>
         </th>
+      </tr>
+    <table>
 </body>
