@@ -208,7 +208,7 @@ description: Echarts在markdown中示例
        animation: false,
        label: {
            normal: {
-               formatter: 'y = 1.0145 * x + 1.0582'
+               formatter: 'y = 1.0145 * x + 1.0582',
                textStyle: {
                    align: 'right'
                }
