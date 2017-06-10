@@ -208,7 +208,7 @@ description: Echarts在markdown中示例
        animation: false,
        label: {
            normal: {
-               formatter: 'y = 1.0145 * x + 1.0582',
+               formatter: 'y = 1.0145 * x + 1.0582'
                textStyle: {
                    align: 'right'
                }
@@ -220,7 +220,7 @@ description: Echarts在markdown中示例
            }
        },
        tooltip: {
-           formatter: 'y = 1.0145 * x + 1.0582',
+           formatter: 'y = 1.0145 * x + 1.0582'
        },
        data: [[{
            coord: [0, 2],
@@ -252,8 +252,8 @@ description: Echarts在markdown中示例
        ],
        yAxis: [
            {gridIndex: 0, min: 0, max: 13},
-           {gridIndex: 1, min: 1, max: 11},
-           {gridIndex: 2, min: 1, max: 20}
+           {gridIndex: 1, min: 1, max: 13},
+           {gridIndex: 2, min: 1, max: 25}
        ],
        series: [
            {
