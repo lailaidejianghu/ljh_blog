@@ -201,7 +201,7 @@ description: Echarts在markdown中示例
                             type: 'dashed'
                         }
                     },
-                    splitNumber: 20
+                    splitNumber:1 
                 },
                 yAxis: {
                     type: 'value',
@@ -304,7 +304,7 @@ description: Echarts在markdown中示例
                             type: 'dashed'
                         }
                     },
-                    splitNumber: 20
+                    splitNumber:1 
                 },
                 yAxis: {
                     type: 'value',
@@ -406,7 +406,7 @@ description: Echarts在markdown中示例
                             type: 'dashed'
                         }
                     },
-                    splitNumber: 20
+                    splitNumber:1 
                 },
                 yAxis: {
                     type: 'value',
