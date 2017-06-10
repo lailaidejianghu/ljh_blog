@@ -333,7 +333,7 @@ $$
    <table>
      <tr>
        <th>
-            <div id="chart1" style="width: 400px;height:200px;"></div>
+            <div id="chart1" style="width: 280px;height:300px;"></div>
              <script type="text/javascript"> 
                var myChart = echarts.init(document.getElementById('chart1'));
                var data =[ [0,2.6],
@@ -435,7 +435,7 @@ $$
             </script>
         </th>
         <th>
-            <div id="chart2" style="width: 400px;height:200px;"></div>
+            <div id="chart2" style="width: 280px;height:300px;"></div>
              <script type="text/javascript"> 
                var myChart = echarts.init(document.getElementById('chart2'));
                var data = [
@@ -538,7 +538,7 @@ $$
             </script>
         </th>
         <th>
-            <div id="chart3" style="width: 400px;height:200px;"></div>
+            <div id="chart3" style="width: 280px;height:300px;"></div>
             <script type="text/javascript"> 
                var myChart = echarts.init(document.getElementById('chart3'));
                var data = [
