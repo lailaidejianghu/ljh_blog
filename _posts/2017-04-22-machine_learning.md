@@ -330,340 +330,340 @@ $$
 当前数据，但是明显这不是一个适合的预测工具。简单来说左下角的图像是一个`欠拟合`(under fitting)的例子，右下角的图像是一个
 `过拟合`(over fitting)的例子。
    <table>
-     <tr>
-       <th>
-            <div id="chart1" style="width: 280px;height:300px;"></div>
-             <script type="text/javascript"> 
-               var myChart = echarts.init(document.getElementById('chart1'));
-               var data =[ [0,2.6],
-                   [1,3.4],
-                   [2,4.3],
-                   [3,4.7],
-                   [4,5],
-                   [5,7.2],
-                   [6,8.4],
-                   [7,8.4],
-                   [8,10.7],
-                   [9,11.3],
-                   [10,12.6]
-                  ];
-                     // See https://github.com/ecomfe/echarts-stat
-                     var myRegression = ecStat.regression('polynomial', data, 1);
-                     myRegression.points.sort(function(a, b) {
-                         return a[0] - b[0];
-                     });
-                     option = {
-                         tooltip: {
-                             trigger: 'axis',
-                             axisPointer: {
-                                 type: 'cross'
-                             }
-                         },
-                         title: {
-                             text: '图1',
-                             subtext: 'underfitting',
-                             sublink: 'https://github.com/ecomfe/echarts-stat',
-                             left: 'center',
-                             top: 16
-                         },
-                         xAxis: {
-                             type: 'value',
-                             splitLine: {
-                                 lineStyle: {
-                                     type: 'dashed'
-                                 }
-                             },
-                             splitNumber:1 
-                         },
-                         yAxis: {
-                             type: 'value',
-                             min: 0,
-                             splitLine: {
-                                 lineStyle: {
-                                     type: 'dashed'
-                                 }
-                             }
-                         },
-                         grid: {
-                             top: 90
-                         },
-                         series: [{
-                             name: 'scatter',
-                             type: 'scatter',
-                             label: {
-                                 emphasis: {
-                                     show: true,
-                                     position: 'right',
-                                     textStyle: {
-                                         color: 'blue',
-                                         fontSize: 16
-                                     }
-                                 }
-                             },
-                             data: data
-                         }, {
-                             name: 'line',
-                             type: 'line',
-                             smooth: true,
-                             showSymbol: false,
-                             data: myRegression.points,
-                             markPoint: {
-                                 itemStyle: {
-                                     normal: {
-                                         color: 'transparent'
-                                     }
-                                 },
-                                 label: {
-                                     normal: {
-                                         show: true,
-                                         position: 'left',
-                                         formatter: myRegression.expression,
-                                         textStyle: {
-                                             color: '#333',
-                                             fontSize: 14
-                                         }
-                                     }
-                                 },
-                                 data: [{
-                                     coord: myRegression.points[myRegression.points.length - 1]
-                                 }]
-                             }
-                         }]
-                     };
-               myChart.setOption(option);
-            </script>
-        </th>
-        <th>
-            <div id="chart2" style="width: 280px;height:300px;"></div>
-             <script type="text/javascript"> 
-               var myChart = echarts.init(document.getElementById('chart2'));
-               var data = [
-                    [0,1.2],
-                    [1,2.45],
-                    [2,5],
-                    [3,6.85],
-                    [4,7.6],
-                    [5,8.25],
-                    [6,8.7],
-                    [7,10.65],
-                    [8,10.9],
-                    [9,9.65],
-                    [10,9.9]
-                   ];
-                     // See https://github.com/ecomfe/echarts-stat
-                     var myRegression = ecStat.regression('polynomial', data, 2);
-                     myRegression.points.sort(function(a, b) {
-                         return a[0] - b[0];
-                     });
-                     option = {
-                         tooltip: {
-                             trigger: 'axis',
-                             axisPointer: {
-                                 type: 'cross'
-                             }
-                         },
-                         title: {
-                             text: '图2',
-                             subtext: '',
-                             sublink: 'https://github.com/ecomfe/echarts-stat',
-                             left: 'center',
-                             top: 16
-                         },
-                         xAxis: {
-                             type: 'value',
-                             splitLine: {
-                                 lineStyle: {
-                                     type: 'dashed'
-                                 }
-                             },
-                             splitNumber:1 
-                         },
-                         yAxis: {
-                             type: 'value',
-                             min: 0,
-                             splitLine: {
-                                 lineStyle: {
-                                     type: 'dashed'
-                                 }
-                             }
-                         },
-                         grid: {
-                             top: 90
-                         },
-                         series: [{
-                             name: 'scatter',
-                             type: 'scatter',
-                             label: {
-                                 emphasis: {
-                                     show: true,
-                                     position: 'right',
-                                     textStyle: {
-                                         color: 'blue',
-                                         fontSize: 16
-                                     }
-                                 }
-                             },
-                             data: data
-                         }, {
-                             name: 'line',
-                             type: 'line',
-                             smooth: true,
-                             showSymbol: false,
-                             data: myRegression.points,
-                             markPoint: {
-                                 itemStyle: {
-                                     normal: {
-                                         color: 'transparent'
-                                     }
-                                 },
-                                 label: {
-                                     normal: {
-                                         show: true,
-                                         position: 'left',
-                                         formatter: myRegression.expression,
-                                         textStyle: {
-                                             color: '#333',
-                                             fontSize: 14
-                                         }
-                                     }
-                                 },
-                                 data: [{
-                                     coord: myRegression.points[myRegression.points.length - 1]
-                                 }]
-                             }
-                         }]
-                     };
-               myChart.setOption(option);
-            </script>
-        </th>
-        <th>
-            <div id="chart3" style="width: 280px;height:300px;"></div>
+    <tr>
+    <th>
+        <div id="chart1" style="width: 280px;height:300px;"></div>
             <script type="text/javascript"> 
-               var myChart = echarts.init(document.getElementById('chart3'));
-               var data = [
-                    [0,30],
-                    [1,10],
-                    [1.5,1],
-                    [3,16],
-                    [4,18],
-                    [5,19],
-                    [6,19.5],
-                    [7,21],
-                    [8,24],
-                    [9,27],
-                    [10,10]
-                     ];
-                     // See https://github.com/ecomfe/echarts-stat
-                     var myRegression = ecStat.regression('polynomial', data, 5);
-                     myRegression.points.sort(function(a, b) {
-                         return a[0] - b[0];
-                     });
-                     option = {
-                         tooltip: {
-                             trigger: 'axis',
-                             axisPointer: {
-                                 type: 'cross'
-                             }
-                         },
-                         title: {
-                             text: '图3',
-                             subtext: 'overfitting',
-                             sublink: 'https://github.com/ecomfe/echarts-stat',
-                             left: 'center',
-                             top: 16
-                         },
-                         xAxis: {
-                             type: 'value',
-                             splitLine: {
-                                 lineStyle: {
-                                     type: 'dashed'
-                                 }
-                             },
-                             splitNumber:1 
-                         },
-                         yAxis: {
-                             type: 'value',
-                             min: 0,
-                             splitLine: {
-                                 lineStyle: {
-                                     type: 'dashed'
-                                 }
-                             }
-                         },
-                         grid: {
-                             top: 90
-                         },
-                         series: [{
-                             name: 'scatter',
-                             type: 'scatter',
-                             label: {
-                                 emphasis: {
-                                     show: true,
-                                     position: 'right',
-                                     textStyle: {
-                                         color: 'blue',
-                                         fontSize: 16
-                                     }
-                                 }
-                             },
-                             data: data
-                         }, {
-                             name: 'line',
-                             type: 'line',
-                             smooth: true,
-                             showSymbol: false,
-                             data: myRegression.points,
-                             markPoint: {
-                                 itemStyle: {
-                                     normal: {
-                                         color: 'transparent'
-                                     }
-                                 },
-                                 label: {
-                                     normal: {
-                                         show: true,
-                                         position: 'left',
-                                         formatter: myRegression.expression,
-                                         textStyle: {
-                                             color: '#333',
-                                             fontSize: 14
-                                         }
-                                     }
-                                 },
-                                 data: [{
-                                     coord: myRegression.points[myRegression.points.length - 1]
-                                 }]
-                             }
-                         }]
-                     };
-               myChart.setOption(option);
-            </script>
-        </th>
-      </tr>
-    <table>
-<br>
-    在原始的线性回归算法中，要对一个查询点x进行预测，比如要衡量h(x)，要经过以下步骤：
-    * 1. 使用参数$\theta$进行拟合，使得$\sum_i(y^{(i)}-\theta^Tx^{(i)})^2$最小.
-    * 2. 输出$\theta^Tx$
-    
-    相反的，局部加权线性回归算法的步骤如下：
-    * 1. 使用参数$\theta$进行拟合，使得加权距离$\sum_i\omega^{(i)}(y^{(i)}=\theta^Tx^{(i)})^2$最小。
-    * 2. 输出$\theta^Tx$
-    这里的$\omega^{(i)}$是非负的重值，很直观的，如果对于某个i的$\omega^{(i)}$特别大，那么在选择拟合参数$\theta$的       
-    时候，就要尽量让这一点的$(y^{(i)}-\theta^Tx^{(i)})^2$小，如果$\omega^{(i)}$小，那么这一点的$(y^{(i)}-\theta^Tx^{(i)})^2$      
-    的误差项在拟合过程中基本可以忽略。
-    较常见的权值公式是：
-    $$
-        \omega^{(i)}=e^{(-\frac{(x^{(i)}-x)^2}{2\tau^2})}
-    $$
-    要注意，权值是依赖每个我们需要评估的的特定点x，此外，如果$|x^{(i)}-x|$值是小的，那么$\omega^{(i)}$的值趋近1，反之,         
-    $\omega^{(i)}$趋近0，因此，当训练样本趋近查询点x时，$\theta$拥有更高的权重。参数$\tau$控制训练样本权重随着训练样本           
-    和查询点x之间距离增大而衰减的速度,$\tau$被称为`带宽`参数。          
+            var myChart = echarts.init(document.getElementById('chart1'));
+            var data =[ [0,2.6],
+                [1,3.4],
+                [2,4.3],
+                [3,4.7],
+                [4,5],
+                [5,7.2],
+                [6,8.4],
+                [7,8.4],
+                [8,10.7],
+                [9,11.3],
+                [10,12.6]
+                ];
+                    // See https://github.com/ecomfe/echarts-stat
+                    var myRegression = ecStat.regression('polynomial', data, 1);
+                    myRegression.points.sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+                    option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'cross'
+                            }
+                        },
+                        title: {
+                            text: '图1',
+                            subtext: 'underfitting',
+                            sublink: 'https://github.com/ecomfe/echarts-stat',
+                            left: 'center',
+                            top: 16
+                        },
+                        xAxis: {
+                            type: 'value',
+                            splitLine: {
+                                lineStyle: {
+                                    type: 'dashed'
+                                }
+                            },
+                            splitNumber:1 
+                        },
+                        yAxis: {
+                            type: 'value',
+                            min: 0,
+                            splitLine: {
+                                lineStyle: {
+                                    type: 'dashed'
+                                }
+                            }
+                        },
+                        grid: {
+                            top: 90
+                        },
+                        series: [{
+                            name: 'scatter',
+                            type: 'scatter',
+                            label: {
+                                emphasis: {
+                                    show: true,
+                                    position: 'right',
+                                    textStyle: {
+                                        color: 'blue',
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: data
+                        }, {
+                            name: 'line',
+                            type: 'line',
+                            smooth: true,
+                            showSymbol: false,
+                            data: myRegression.points,
+                            markPoint: {
+                                itemStyle: {
+                                    normal: {
+                                        color: 'transparent'
+                                    }
+                                },
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        position: 'left',
+                                        formatter: myRegression.expression,
+                                        textStyle: {
+                                            color: '#333',
+                                            fontSize: 14
+                                        }
+                                    }
+                                },
+                                data: [{
+                                    coord: myRegression.points[myRegression.points.length - 1]
+                                }]
+                            }
+                        }]
+                    };
+            myChart.setOption(option);
+        </script>
+    </th>
+    <th>
+        <div id="chart2" style="width: 280px;height:300px;"></div>
+            <script type="text/javascript"> 
+            var myChart = echarts.init(document.getElementById('chart2'));
+            var data = [
+                [0,1.2],
+                [1,2.45],
+                [2,5],
+                [3,6.85],
+                [4,7.6],
+                [5,8.25],
+                [6,8.7],
+                [7,10.65],
+                [8,10.9],
+                [9,9.65],
+                [10,9.9]
+                ];
+                    // See https://github.com/ecomfe/echarts-stat
+                    var myRegression = ecStat.regression('polynomial', data, 2);
+                    myRegression.points.sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+                    option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'cross'
+                            }
+                        },
+                        title: {
+                            text: '图2',
+                            subtext: '',
+                            sublink: 'https://github.com/ecomfe/echarts-stat',
+                            left: 'center',
+                            top: 16
+                        },
+                        xAxis: {
+                            type: 'value',
+                            splitLine: {
+                                lineStyle: {
+                                    type: 'dashed'
+                                }
+                            },
+                            splitNumber:1 
+                        },
+                        yAxis: {
+                            type: 'value',
+                            min: 0,
+                            splitLine: {
+                                lineStyle: {
+                                    type: 'dashed'
+                                }
+                            }
+                        },
+                        grid: {
+                            top: 90
+                        },
+                        series: [{
+                            name: 'scatter',
+                            type: 'scatter',
+                            label: {
+                                emphasis: {
+                                    show: true,
+                                    position: 'right',
+                                    textStyle: {
+                                        color: 'blue',
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: data
+                        }, {
+                            name: 'line',
+                            type: 'line',
+                            smooth: true,
+                            showSymbol: false,
+                            data: myRegression.points,
+                            markPoint: {
+                                itemStyle: {
+                                    normal: {
+                                        color: 'transparent'
+                                    }
+                                },
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        position: 'left',
+                                        formatter: myRegression.expression,
+                                        textStyle: {
+                                            color: '#333',
+                                            fontSize: 14
+                                        }
+                                    }
+                                },
+                                data: [{
+                                    coord: myRegression.points[myRegression.points.length - 1]
+                                }]
+                            }
+                        }]
+                    };
+            myChart.setOption(option);
+        </script>
+    </th>
+    <th>
+        <div id="chart3" style="width: 280px;height:300px;"></div>
+        <script type="text/javascript"> 
+            var myChart = echarts.init(document.getElementById('chart3'));
+            var data = [
+                [0,30],
+                [1,10],
+                [1.5,1],
+                [3,16],
+                [4,18],
+                [5,19],
+                [6,19.5],
+                [7,21],
+                [8,24],
+                [9,27],
+                [10,10]
+                    ];
+                    // See https://github.com/ecomfe/echarts-stat
+                    var myRegression = ecStat.regression('polynomial', data, 5);
+                    myRegression.points.sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+                    option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'cross'
+                            }
+                        },
+                        title: {
+                            text: '图3',
+                            subtext: 'overfitting',
+                            sublink: 'https://github.com/ecomfe/echarts-stat',
+                            left: 'center',
+                            top: 16
+                        },
+                        xAxis: {
+                            type: 'value',
+                            splitLine: {
+                                lineStyle: {
+                                    type: 'dashed'
+                                }
+                            },
+                            splitNumber:1 
+                        },
+                        yAxis: {
+                            type: 'value',
+                            min: 0,
+                            splitLine: {
+                                lineStyle: {
+                                    type: 'dashed'
+                                }
+                            }
+                        },
+                        grid: {
+                            top: 90
+                        },
+                        series: [{
+                            name: 'scatter',
+                            type: 'scatter',
+                            label: {
+                                emphasis: {
+                                    show: true,
+                                    position: 'right',
+                                    textStyle: {
+                                        color: 'blue',
+                                        fontSize: 16
+                                    }
+                                }
+                            },
+                            data: data
+                        }, {
+                            name: 'line',
+                            type: 'line',
+                            smooth: true,
+                            showSymbol: false,
+                            data: myRegression.points,
+                            markPoint: {
+                                itemStyle: {
+                                    normal: {
+                                        color: 'transparent'
+                                    }
+                                },
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        position: 'left',
+                                        formatter: myRegression.expression,
+                                        textStyle: {
+                                            color: '#333',
+                                            fontSize: 14
+                                        }
+                                    }
+                                },
+                                data: [{
+                                    coord: myRegression.points[myRegression.points.length - 1]
+                                }]
+                            }
+                        }]
+                    };
+            myChart.setOption(option);
+        </script>
+    </th>
+    </tr>
+<table>
 
-    局部加权线性回归是第一个`非参数`算法的例子，无权重的线性回归算法是一种`参数`算法。因为有固定的有限数量的参数(也就是$\theta^{(i)})$）           
-    拟合数据。。一旦拟合了$\theta^{(i)}$'s,就将它们保存下来，我们就不需要将样本数据保存下来用于以后的预测。相反，用加权           
-    线性回归，我们需要保存整个样本数据。这里的非参数算法是指为了呈现假设h随数据集规模的增长而线性增长，我们需要顺序保存一些          
-    数据的规模。         
+在原始的线性回归算法中，要对一个查询点x进行预测，比如要衡量h(x)，要经过以下步骤：
+* 1. 使用参数$\theta$进行拟合，使得$\sum_i(y^{(i)}-\theta^Tx^{(i)})^2$最小.
+* 2. 输出$\theta^Tx$
+
+相反的，局部加权线性回归算法的步骤如下：
+* 1. 使用参数$\theta$进行拟合，使得加权距离$\sum_i\omega^{(i)}(y^{(i)}=\theta^Tx^{(i)})^2$最小。
+* 2. 输出$\theta^Tx$
+这里的$\omega^{(i)}$是非负的重值，很直观的，如果对于某个i的$\omega^{(i)}$特别大，那么在选择拟合参数$\theta$的       
+时候，就要尽量让这一点的$(y^{(i)}-\theta^Tx^{(i)})^2$小，如果$\omega^{(i)}$小，那么这一点的$(y^{(i)}-\theta^Tx^{(i)})^2$      
+的误差项在拟合过程中基本可以忽略。
+较常见的权值公式是：
+$$
+    \omega^{(i)}=e^{(-\frac{(x^{(i)}-x)^2}{2\tau^2})}
+$$
+要注意，权值是依赖每个我们需要评估的的特定点x，此外，如果$|x^{(i)}-x|$值是小的，那么$\omega^{(i)}$的值趋近1，反之,         
+$\omega^{(i)}$趋近0，因此，当训练样本趋近查询点x时，$\theta$拥有更高的权重。参数$\tau$控制训练样本权重随着训练样本           
+和查询点x之间距离增大而衰减的速度,$\tau$被称为`带宽`参数。          
+
+局部加权线性回归是第一个`非参数`算法的例子，无权重的线性回归算法是一种`参数`算法。因为有固定的有限数量的参数(也就是$\theta^{(i)})$）           
+拟合数据。。一旦拟合了$\theta^{(i)}$'s,就将它们保存下来，我们就不需要将样本数据保存下来用于以后的预测。相反，用加权           
+线性回归，我们需要保存整个样本数据。这里的非参数算法是指为了呈现假设h随数据集规模的增长而线性增长，我们需要顺序保存一些          
+数据的规模。         
 
 
 ### Part II 分类和逻辑回归(Classification and logistic regression)
