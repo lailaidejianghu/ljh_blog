@@ -188,7 +188,7 @@ description: Echarts在markdown中示例
                     }
                 },
                 title: {
-                    text: '18 companies net profit and main business income (million)',
+                    text: '图1',
                     subtext: 'By ecStat.regression',
                     sublink: 'https://github.com/ecomfe/echarts-stat',
                     left: 'center',
@@ -205,7 +205,7 @@ description: Echarts在markdown中示例
                 },
                 yAxis: {
                     type: 'value',
-                    min: -40,
+                    min: 0,
                     splitLine: {
                         lineStyle: {
                             type: 'dashed'
@@ -291,7 +291,7 @@ description: Echarts在markdown中示例
                     }
                 },
                 title: {
-                    text: '18 companies net profit and main business income (million)',
+                    text: '图2',
                     subtext: 'By ecStat.regression',
                     sublink: 'https://github.com/ecomfe/echarts-stat',
                     left: 'center',
@@ -308,7 +308,7 @@ description: Echarts在markdown中示例
                 },
                 yAxis: {
                     type: 'value',
-                    min: -40,
+                    min: 0,
                     splitLine: {
                         lineStyle: {
                             type: 'dashed'
@@ -393,7 +393,7 @@ description: Echarts在markdown中示例
                     }
                 },
                 title: {
-                    text: '18 companies net profit and main business income (million)',
+                    text: '图3',
                     subtext: 'By ecStat.regression',
                     sublink: 'https://github.com/ecomfe/echarts-stat',
                     left: 'center',
@@ -410,7 +410,7 @@ description: Echarts在markdown中示例
                 },
                 yAxis: {
                     type: 'value',
-                    min: -40,
+                    min: 0,
                     splitLine: {
                         lineStyle: {
                             type: 'dashed'
