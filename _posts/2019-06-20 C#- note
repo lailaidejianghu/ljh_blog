@@ -1,3 +1,10 @@
+---
+layout:     post
+title:    C# - note
+category: blog
+description: 
+---
+
 #static 关键字
 
 static关键字修饰的类为静态类。
