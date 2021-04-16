@@ -1,7 +1,0 @@
-permalink: /:title
-
-title: lailaidejianghu.github.io
-url: http://lailaidejianghu.github.io
-feed: /atom.xml
-author_info: <a href="http://lailaidejianghu.github.io/">ljh</a>
-markdown: kramdown
